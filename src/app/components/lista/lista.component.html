@@ -1,0 +1,47 @@
+<h5 style="text-align:center">Lista de Datos consumido de FIREBASE</h5>
+<!----><div class="table-responsive mt-6 fireang">
+  <table class="table  table-bordered table-hover">
+    <thead class=".bg-gradient-danger">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">nombre</th>
+        <th scope="col">descripcion</th>
+        <th scope="col">categoria</th>
+        <th scope="col">precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items; index as i">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.nombre}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>{{item.categoria}}</td>
+        <td>{{item.precio}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+<div class="container-ms-12">
+
+<div class="alert alert-success fireang" role="alert" *ngFor="let item of items">
+  {{item.nombre}}-{{item.id}}
+</div>
+<div class="alert alert-success fireang" role="alert" *ngFor="let item of items">
+  {{item.descripcion}}
+</div>
+<div class="alert alert-success fireang" role="alert" *ngFor="let item of items">
+  {{item.categoria}}
+</div>
+<div class="alert alert-success fireang" role="alert" *ngFor="let item of items">
+  {{item.precio}}
+</div>
+</div>
+<style>
+  .fireang {
+    width: 39%;
+    float: left;
+    margin-right: 10px;
+  }
+</style>

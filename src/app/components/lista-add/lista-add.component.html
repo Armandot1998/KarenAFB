@@ -1,0 +1,18 @@
+<p>
+  lista-add works!
+</p>
+<form (ngSubmit)= "addItem()">
+<input type="text" name="nombre" placeholder="ingrese el nombre del producto" 
+class="form-control" [(ngModel)] ="item.nombre" aria-required="true">
+<br>
+<input type="text" name="descripcion" placeholder="ingrese la descripcion del producto" 
+class="form-control" [(ngModel)] ="item.descripcion" required>
+<br>
+<input type="text" name="categoria" placeholder="ingrese la categoria del producto" 
+class="form-control" [(ngModel)] ="item.categoria" required>
+<br>
+<input type="text" name="precio" placeholder="ingrese el precio del producto" 
+class="form-control" [(ngModel)] ="item.precio" required>
+<br>
+<button type="submit mt-4"  class="btn btn-warning">GUARDAR</button>
+</form>
